@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="py-5 login-box">
+    <div class="container px-4 px-lg-5 mt-5 cont1">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Регистрация</h1>
+        </div>
+        <div class="login-img">
+            <img src="../static/img/login.png" alt="">
+        </div>
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert" id="errorAlert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            Пожалуйста, исправьте следующие ошибки:
+            <ul>
+            {% for error in form.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <div id="passwordErrorMessage" class="text-danger"></div>
+
+        <div class="about-box">
+            <form id="registrationForm" method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br><br>
+                <button type="submit" class="btn btn-primary login-btn" onclick="validatePassword()">Регистрация</button>
+
+            </form>
+        </div>
+    </div>
+</section>
+<script>
+    function validatePassword() {
+        var passwordInput = document.getElementById('id_password1');
+        var confirmPasswordInput = document.getElementById('id_password2');
+        var errorMessage = document.getElementById('passwordErrorMessage');
+
+        if (passwordInput.value.length < 8) {
+            errorMessage.innerHTML = 'Пароль должен содержать не менее 8 символов.';
+            return; 
+            // Не отправляем форму, если пароль не соответствует требованиям
+        }
+
+        // Если пароль прошел проверку, очищаем сообщение об ошибке и отправляем форму
+        errorMessage.innerHTML = '';
+        document.getElementById('registrationForm').submit();
+    }
+    document.getElementById('errorAlert').addEventListener('click', function() {
+        this.style.display = 'none';
+    });
+</script>
+
+
+{% endblock  %}

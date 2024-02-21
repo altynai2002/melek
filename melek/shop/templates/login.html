@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="py-5 login-box">
+    <div class="container px-4 px-lg-5 mt-5 cont1">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Войти в аккаунт</h1>
+        </div>
+        <div class="login-img">
+            <img src="../static/img/login2.png" alt="">
+        </div>
+        <div class="about-box">
+            <form method="post" action="{% url 'login' %}" id="loginForm">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Введите логин" name="username" onkeydown="handleKeyPress(event, 'passwordInput')">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" placeholder="Введите пароль" name="password" id="passwordInput" onkeydown="handleLoginButton(event)">
+                </div>
+                <div class="mb-3 text-center login-btn-box">
+                    <button type="button" class="btn btn-primary login-btn" onclick="submitForm()">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock  %}

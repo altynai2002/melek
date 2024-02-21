@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- Header-->
+<header class="bg-dark py-5 bg-img">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">О нас</h1>
+            <p class="lead fw-normal text-white mb-0">Любовь в каждом доме, хвостик в каждом сердце</p>
+        </div>
+    </div>
+</header>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5 cont1">
+        <div class="about-box">
+            <div class="about-text-box">
+                <h1 class="display-4 fw-bolder">Мы стремимся</h1>
+                <p class="lead fw-normal about-text">
+                     создать <strong>безопасное и любящее</strong> окружение для животных, 
+                    поддерживая процесс усыновления и способствуя благотворительности.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="../static/img/about1.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5 cont1">
+        <div class="logo-txt">
+            <h1 class="display-4 fw-bolder find-txt">Следите за нашими новостями</h1>
+        </div>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <div class="card h-100 update-card">
+                    <!-- Product image-->
+                    <img class="card-img-top update-img" src="../static/img/about2.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="lead fw-normal about-text">Ответственность, забота и стремление к созданию лучшей жизни для животных.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100 update-card">
+                    <!-- Product image-->
+                    <img class="card-img-top update-img" src="../static/img/about2.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="lead fw-normal about-text">Мы стремимся создать сообщество людей, объединенных любовью к животным, и активно сотрудничаем с приютами.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100 update-card">
+                    <!-- Product image-->
+                    <img class="card-img-top update-img" src="../static/img/about2.png" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="lead fw-normal about-text">Мы придерживаемся этологического подхода в обращении с животными.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock  %}

@@ -1,0 +1,254 @@
+body, .navbar-brand, .nav-link {
+    color: #503C2B;
+    font-family: "Comfortaa", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #503C2B;
+}
+
+.bg-img {
+    background: url('../img/mainpage.png') no-repeat center center;
+    background-size: 100% auto;
+    height: 80vh;
+}
+
+
+
+.navbar {
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.alert {
+    position: fixed;
+    background-color: #c7af8a97;
+    color: #fff;
+    text-align: center;
+    height: 8vw;
+    top: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 200;
+}
+
+.my-5 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.find-txt {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 3rem;
+    color: #503C2B;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    margin-top: 24px;
+}
+
+.logo-card {
+    align-items: center;
+    height: fit-content !important;
+    border-color: #503c2b50;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.logo-card:hover {
+    background-color: #503c2b;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.226);
+    color: #fff;
+    border-color: #503c2bb2;
+}
+
+.logo-card:hover > img, .login-img > img{
+    filter: invert(100%) brightness(100%);
+    color: #fff;
+}
+
+.card-box {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* .card-box:hover {
+    background-color: #503c2b;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.226);
+    color: #fff;
+    border-color: #503c2bb2;
+} */
+
+.card-box > .card-footer > .text-center > a:hover {
+    background-color: #503c2b;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.226);
+    color: #fff !important;
+    border-color: #eeeeeeb2;
+}
+
+.cont1 {
+    margin-top: 0px !important;
+}
+
+.btn-chng {
+    color: #503C2B;
+    border-color: #503C2B;
+    margin: 5px;
+}
+
+.btn-chng:hover {
+    background-color: #503C2B;
+}
+
+.gender-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social {
+    width: 50% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social > i {
+    color: #fff;
+    margin: 10px 10px;
+}
+
+.social > i:hover {
+    color: rgba(255, 255, 255, 0.553);
+}
+
+/* ABOUT PAGE */
+
+.about-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text-box {
+    width: 50%;
+}
+
+.about-img > img {
+    height: 30vw;
+    width: 50% auto;
+}
+
+.udate-img {
+    height: 20vw;
+}
+
+.update-card {
+    align-items: center;
+    height: fit-content !important;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* END ABOUT PAGE */
+
+
+/* LOGIN SECTION */
+
+.login-box {
+    padding-top: 6rem !important;
+    background-size: 100% auto;
+    background-color: #503C2B !important;
+}
+
+.login-img{
+    text-align: center;
+}
+
+.login-img > img {
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+
+.login-btn {
+    background-color: #dddad8 !important;
+    border-color: #fdfcfb;
+    color: #503C2B;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: #ffffff !important;
+    color: #503C2B;
+    border-color: #fdfcfb;
+}
+
+.about-box > form {
+    background-color: #372a206f;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 5%;
+}
+
+.form-control {
+    border-radius: 1rem !important;
+    background-color: #372a206f;
+    color: #f5f2f0;
+}
+
+.form-control::placeholder {
+    color: rgba(225, 220, 220, 0.342);
+    opacity: 1;
+}
+
+.form-control:focus {
+    color: #fff;
+    background-color: #372a206f;
+}
+
+/* END LOGIN SECTION */
+
+/* ANIMAL SECTION */
+
+.img-box {
+    display: contents;
+}
+
+.adopt-img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.adopt-btn {
+    background-color:  #503C2B !important;
+    border-color: #fdfcfb;
+    color: #dddad8;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.adopt-btn:hover {
+    background-color: #ffffff !important;
+    color: #503C2B;
+    border-color: #503C2B;
+}
+
+
+/* END ANIMAL SECTION */

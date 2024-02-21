@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5 cont1">
+        <div class="about-box">
+            <div class="card mb-3" style="max-width: 540px; margin-top: 20vh; margin-right: 10px;">
+                <div class="row g-0">
+                    <div class="col-md-4 img-box">
+                        <img src="{{animal.image.url}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8 img-box">
+                        <div class="card-body">
+                            <h5 class="card-title">{{animal.name}}</h5>
+                            <p class="card-text">Пол: {{animal.gender}}</p>
+                            <p class="card-text">Порода: {{animal.breed}}</p>
+                            <p class="card-text">Возраст: {{ animal.years }} г. {{ animal.months }} мес.</p>
+                            <p class="card-text">{{animal.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px; margin-top: 20vh; margin-left: 2vh;">
+
+                <div class="row g-0">
+                    <div class="col-md-4 img-box">
+                        <img src="../static/img/adopt.png" class="img-fluid rounded-start adopt-img" alt="...">
+                    </div>
+                    <div class="col-md-8 img-box">
+                        <div class="card-body">
+                            <button type="button" class="btn btn-primary login-btn adopt-btn">Хочу усыновить</button>
+                
+                            <p class="card-text">Прочитайте правила усыновления</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock  %}
