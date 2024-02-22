@@ -1,3 +1,4 @@
+from django.utils.text import slugify
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
@@ -5,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .forms import SignUpForm
 from django.contrib import messages
-from .models import Animal
+from .models import Animal, Category
 
 def shop(request):
     
@@ -76,3 +77,14 @@ def animal(request, pk):
     }
 
     return render(request, 'animal.html', {'animal': animal_data})
+
+def category(request, foo):
+    try:
+        category = Category.objects.get(name=foo)
+        animalss = Animal.objects.filter(category=category)
+        animals = [{'id': animal.id, 'image': animal.image, 'name': animal.name, 'breed': animal.get_breed_display(), 'gender': animal.gender, 'years': animal.age // 12, 'months': animal.age % 12} for animal in animalss]
+
+        return render(request, 'category.html', {'category': category, 'animals': animals})
+    except Category.DoesNotExist:
+        messages.success(request, ("Произошла ошибка. Попробуйте снова."))
+        return redirect('main')
